@@ -60,7 +60,7 @@
                     android:textColor="@color/black"
                     android:layout_width="match_parent"
                     android:layout_marginLeft="25dp"
-                    android:text="Cowok ini punya 2 wujud! Pilih yang mana ya..?"
+                    android:text="Cowok ini punya 2 wujud! Pilih yang mana ya...?"
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout
