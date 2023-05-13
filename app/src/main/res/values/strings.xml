@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Izo Novel</string>
+    <string name="app_name">Light Novel</string>
     <string name="login_first_name">First Name</string>
     <string name="login_last_name">Last Name</string>
     <string name="login_email">Email</string>

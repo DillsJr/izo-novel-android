@@ -9,7 +9,7 @@ import android.widget.Spinner;
 
 public class BiodataActivity extends AppCompatActivity {
     Spinner spnCountry;
-    private String[] optCountry = {"Indonesia","Amerika", "Arab Saudi"};
+    private final String[] optCountry = {"Indonesia","Amerika", "Arab Saudi"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
