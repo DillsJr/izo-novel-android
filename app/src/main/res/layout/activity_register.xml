@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_weight="3"
-            android:text="Username"
+            android:text="@string/username"
             android:layout_height="wrap_content"/>
 
         <EditText
@@ -38,11 +38,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_weight="3"
-            android:text="Full Name"
+            android:text="@string/login_last_name"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:id="@+id/FullName"
+            android:id="@+id/LastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -59,7 +59,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_weight="3"
-            android:text="Email"
+            android:text="@string/email"
             android:layout_height="wrap_content"/>
 
         <EditText
@@ -80,7 +80,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_weight="3"
-            android:text="Password"
+            android:text="@string/password"
             android:layout_height="wrap_content"/>
 
         <EditText
@@ -102,13 +102,15 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/btn_cancel_register"
             android:text="Cancel"
             android:layout_weight="1"
             tools:ignore="ButtonStyle,HardcodedText,VisualLintButtonSize" />
         <Button
+            android:id="@+id/btn_register_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sumit"
+            android:text="Submit"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,VisualLintButtonSize" />
