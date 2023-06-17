@@ -2,6 +2,8 @@ package com.sata.izonovel.Model;
 
 import java.util.List;
 
+
+
 public class UserModel {
     private document document;
 
