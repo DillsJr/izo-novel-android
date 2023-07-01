@@ -1,16 +1,19 @@
 package com.sata.izonovel.Model;
 
-public class ListNovelResponseModel {
-    public class Documents {
-        private String _id;
-        private String genre;
-        private String manusia;
-        private String penerbit;
-        private String pengarang;
-        private String sinopsis;
-        private String tahunterbit;
-        private String judul;
+import java.util.List;
 
+public class ListNovelResponseModel {
+
+    public List<Documents> getDocuments() {
+        return documents;
+    }
+
+    public void setDocuments(List<Documents> documents) {
+        this.documents = documents;
+    }
+
+    private List<Documents> documents;
+    public static class Documents {
         public String get_id() {
             return _id;
         }
@@ -59,12 +62,12 @@ public class ListNovelResponseModel {
             this.sinopsis = sinopsis;
         }
 
-        public String getTahunterbit() {
-            return tahunterbit;
+        public String getTahunTerbit() {
+            return tahunTerbit;
         }
 
-        public void setTahunterbit(String tahunterbit) {
-            this.tahunterbit = tahunterbit;
+        public void setTahunTerbit(String tahunTerbit) {
+            this.tahunTerbit = tahunTerbit;
         }
 
         public String getJudul() {
@@ -74,5 +77,26 @@ public class ListNovelResponseModel {
         public void setJudul(String judul) {
             this.judul = judul;
         }
+
+        public String getGambar() {
+            return gambar;
+        }
+
+        public void setGambar(String gambar) {
+            this.gambar = gambar;
+        }
+
+
+        private  String _id;
+        private  String genre;
+
+        private String judul;
+        private  String manusia;
+        private  String penerbit;
+        private  String pengarang;
+        private  String sinopsis;
+        private  String tahunTerbit;
+        private  String gambar;
+
     }
 }

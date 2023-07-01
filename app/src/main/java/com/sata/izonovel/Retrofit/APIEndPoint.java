@@ -29,5 +29,5 @@ public interface APIEndPoint {
 
     @Headers({"api-key:" + API_KEY, "Content-Type:application/json"})
     @POST("app/data-yvczw/endpoint/data/v1/action/find")
-    Call<ListNovelRequestModel> listDaftarNovel(@Body ListNovelRequestModel listNovelRequestModel);
+    Call<ListNovelRequestModel> litDaftarNovel(@Body ListNovelRequestModel listNovelRequestModel);
 }

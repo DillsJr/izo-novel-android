@@ -8,15 +8,18 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import com.sata.izonovel.Adapter.DaftarNovelAdapter;
+import com.sata.izonovel.Model.InsertNovelModel;
 import com.sata.izonovel.Model.ListNovelRequestModel;
 import com.sata.izonovel.Model.ListNovelResponseModel;
 import com.sata.izonovel.Retrofit.APIService;
+
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 public class DaftarActivity extends AppCompatActivity {
 
@@ -41,7 +44,7 @@ public class DaftarActivity extends AppCompatActivity {
     }
 
     private void onLoadData(){
-        ListNovelRequestModel listNovelRequestModel = new ListNovelResponseModel();
+        ListNovelRequestModel listNovelRequestModel=new ListNovelRequestModel();
         listNovelRequestModel.setCollection("novel");
         listNovelRequestModel.setDatabase("izonovel");
         listNovelRequestModel.setDataSource("Cluster0");
@@ -51,7 +54,7 @@ public class DaftarActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
 
-        APIService.endpoint().listDaftarNovel(listNovelRequestModel).enqueue(new Callback<ListNovelResponseModel>() {
+        APIService.endpoint().litDaftarNovel(listNovelRequestModel).enqueue(new Callback<ListNovelResponseModel>() {
             @Override
             public void onResponse(Call<ListNovelResponseModel> call, Response<ListNovelResponseModel> response) {
                 List<ListNovelResponseModel.Documents> documents = response.body().getDocuments();

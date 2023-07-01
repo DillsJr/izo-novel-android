@@ -1,16 +1,20 @@
 package com.sata.izonovel.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.sata.izonovel.DetailActivity;
 import com.sata.izonovel.Model.ListNovelResponseModel;
 import com.sata.izonovel.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -37,7 +41,7 @@ public class DaftarNovelAdapter extends RecyclerView.Adapter<DaftarNovelAdapter.
         final ListNovelResponseModel.Documents documents = documentsList.get(position);
 
         String judulNovel = documents.getJudul();
-        String tahunDanPengarang = documents.getTahunterbit() +" | "+ documents.getPengarang();
+        String tahunDanPengarang = documents.getTahunTerbit() +" | "+ documents.getPengarang();
         String sinopsis = documents.getSinopsis();
         String genre = documents.getGenre();
 
@@ -45,6 +49,19 @@ public class DaftarNovelAdapter extends RecyclerView.Adapter<DaftarNovelAdapter.
         holder.TahunDanPengarang.setText(tahunDanPengarang);
         holder.Sinopsis.setText(sinopsis);
         holder.Genre.setText(genre);
+
+        String gambar = documents.getGambar();
+        Picasso.get().load(gambar).into(holder.imgPoster);
+
+        holder .itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("id", documents.get_id());
+                intent.putExtra("judul", judulNovel);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -53,6 +70,7 @@ public class DaftarNovelAdapter extends RecyclerView.Adapter<DaftarNovelAdapter.
     }
 
     public class AdapterHolder extends RecyclerView.ViewHolder{
+        ImageView imgPoster;
         TextView JudulNovel;
         TextView TahunDanPengarang;
         TextView Sinopsis;
